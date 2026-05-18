@@ -16,11 +16,11 @@ class Graph:
                     return True
             elif recstack[neighbor] == True:
                 return True
-        recstack[v] == False
+        recstack[v] = False
         return False
     def isCyclic(self):
         visited = [False] * (self.v+1)
-        recstack = [False]
+        recstack = [False] * (self.v+1)
         for node in range(self.v):
             if visited[node] == False:
                 if self.isCyclicUtil(node,visited,recstack) == True:
